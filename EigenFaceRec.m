@@ -115,13 +115,10 @@ function dist = euclid_distance(x1,x2)
     if(length(x1) ~= length(x2) )
         error('Vecor dimensions are not compatible');
     else
-        n = length(x1);
+
         v = (x1-x2).^2;
-        sum =  0;
-        for i = 1:n
-            sum = sum+v(i);
-        end
-        dist = sqrt(sum);
+        total = sum(v);
+        dist = sqrt(total);
     end
 
 end
