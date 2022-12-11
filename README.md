@@ -18,15 +18,15 @@ Matching is done by computing the distance between the PCA coefficients of two f
 
 1) To run the program, add folder containing "EigenFaceRec.m”  and “Face Dataset” to the MATLAB path
 
-<br>2) Run "EigenFaceRec.m”
+2) Run "EigenFaceRec.m”
 
-<br>3) Enter the input image name in the MATLAB command line, add the “.jpg” or “.bmp”
+3) Enter the input image name in the MATLAB command line, add the “.jpg” or “.bmp” at the end
 
-<br>4) The command line will output the input image Eigenface coefficients $\overrightarrow{\Omega}_i$
+4) The command line will output the input image Eigenface coefficients $\overrightarrow{\Omega}_i$
 
-<br>5) Wait for the script to display all the relevant image outputs in order
+5) Wait for the script to display all the relevant image outputs in order
 
-<br>6) If the name of the file was entered incorrectly, re-run the program
+6) If the name of the file was entered incorrectly, re-run the program
 
 
 # Notes
