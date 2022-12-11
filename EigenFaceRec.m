@@ -49,7 +49,7 @@ A = R-m;
 L = A'*A;
 [V,D] = eig(L);
 
-U = A*V;
+U = A*V; %Eigen face space
 
 %% Eigenface coefficients
 
@@ -78,6 +78,19 @@ for i = 1:M
         least_dist = distances(i);
         least_dist_index = i;
     end
+end
+%% Saving the mean face as .jpg
+avg_matrix_m = uint8(round(avg_matrix_m));
+imwrite(avg_matrix_m, "Face dataset\MeanFace.jpg");
+
+%% Save the eigen faces
+eignFace = zeros(rows,cols); %Prealloca for efficiency 
+for i=1:M
+    for j = 1:rows
+        eignFace(j,:) = U(cols*(j-1)+1:cols*j,i); %reshape column vector to rows*cols
+    end
+    eignFace = uint8(round(eignFace));
+    imwrite(eignFace,"Face dataset\EigenFaces\"+ string(i)+ ".jpg");
 end
 toc
 %% Open the least distance training image and input image (These are the outputs)
