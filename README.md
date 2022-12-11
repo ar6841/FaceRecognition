@@ -28,6 +28,18 @@ Matching is done by computing the distance between the PCA coefficients of two f
 
 6) If the name of the file was entered incorrectly, re-run the program
 
+# Outputs
+
+![image](https://user-images.githubusercontent.com/96152967/206932661-faaa7823-8930-4c80-a3e8-970b58ca5fd5.png)
+
+![image](https://user-images.githubusercontent.com/96152967/206932685-46f56d8c-1fc7-4185-8787-746448d3b6d6.png)
+
+![image](https://user-images.githubusercontent.com/96152967/206932709-79859c2f-b033-436d-ae41-a18da78d5d38.png)
+
+
+
+
+
 
 # Notes
 Although this training dataset contains faces, the algorithm is much more abstract and can be used for recognizing any object as long as lighting, scale and translation, and a highly controlled environment are maintained
