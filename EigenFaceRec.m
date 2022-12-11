@@ -4,15 +4,15 @@ clc
 
 %% User input
 
-image_name = input("Enter image name, PLEASE ADD .jpg or .bmp: ","s");
+image_name = input('Enter image name, PLEASE ADD .jpg or .bmp: ','s');
 
-input_image = imread(append("Face dataset\Testing\",image_name));
+input_image = imread(append('Face dataset\Testing\',image_name));
 
 %% Start timer
 tic
 
 %% Read the images in training set
-TrainingDatastore = imageDatastore("Face dataset\Training\");
+TrainingDatastore = imageDatastore('Face dataset\Training\');
 M = length(TrainingDatastore.Files); % Number of images
 for i=1:M
     training_images(:,:,i) = imread(TrainingDatastore.Files{i,1});
@@ -83,24 +83,24 @@ toc
 %% Open the least distance training image and input image (These are the outputs)
 f1 = figure;
 imshow(input_image)
-title( "Input image")
-disp("Input image Eigen face coefficients = ");
-fprintf("%d\n",omega_I) % Print the eigen coefficients of input image
+title( 'Input image')
+disp('Input image Eigen face coefficients = ');
+fprintf('%d\n',omega_I) % Print the eigen coefficients of input image
 
 
 f2 = figure;
 
-%splits = split(TrainingDatastore.Files{least_dist_index,1},"\"); %split the matched image path
+%splits = split(TrainingDatastore.Files{least_dist_index,1},'\'); %split the matched image path
 %recognized_name = splits{end}; %training image matched name
 
 imshow(TrainingDatastore.Files{least_dist_index,1}); %show matched image
-title(append("Matched image in training dataset"));
+title(append('Matched image in training dataset'));
 
 %% Euclidian distance function
 function dist = euclid_distance(x1,x2)
 
     if(length(x1) ~= length(x2) )
-        error("Vecor dimensions are not compatible");
+        error('Vecor dimensions are not compatible');
     else
         n = length(x1);
         v = (x1-x2).^2;
