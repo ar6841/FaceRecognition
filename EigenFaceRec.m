@@ -79,6 +79,7 @@ for i = 1:M
         least_dist_index = i;
     end
 end
+toc
 %% Open the least distance training image and input image (These are the outputs)
 f1 = figure;
 imshow(input_image)
