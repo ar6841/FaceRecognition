@@ -6,9 +6,9 @@ clc
 
 image_name = input('Enter image name, PLEASE ADD .jpg or .bmp: ','s');
 
-input_image = imread(append('Face dataset\Testing\',image_name));
-
 tic %Start timer
+
+input_image = imread(append('Face dataset\Testing\',image_name));
 
 % A constraint here is that all images are the same rows*cols size
 rows = size(input_image,1);
